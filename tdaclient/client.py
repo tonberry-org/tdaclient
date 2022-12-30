@@ -6,7 +6,7 @@ import logging
 from typing import Optional, TypedDict, Any, Mapping
 import http.client as http_client
 
-from tdaclient.td.oauth_request import OAuthRequest, OAuthResponse
+from tdaclient.oauth_request import OAuthRequest, OAuthResponse
 
 http_client.HTTPConnection.debuglevel = 1
 
@@ -23,7 +23,7 @@ class TDClientConfig(TypedDict):
     code: str
 
 
-class TDClient:
+class TDAClient:
     def __init__(self, session: Optional[Session] = None) -> None:
         self.session = requests.Session() if session is None else session
         retry_strategy = Retry(

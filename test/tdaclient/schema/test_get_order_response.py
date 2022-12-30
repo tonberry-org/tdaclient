@@ -1,5 +1,5 @@
 import json
-from tdaclient.td.schema.gen.get_order_response import GetOrderResponse
+from tdaclient.schema.get_order_response import GetOrderResponse
 
 
 RESPONSE = """

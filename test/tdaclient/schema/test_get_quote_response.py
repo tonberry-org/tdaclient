@@ -1,4 +1,4 @@
-from tdaclient.td.schema.gen.get_quote_response import GetQuoteResponse
+from tdaclient.schema.get_quote_response import GetQuoteResponse
 import json
 
 RESPONSE = """

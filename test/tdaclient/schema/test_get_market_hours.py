@@ -1,4 +1,4 @@
-from tdaclient.td.schema.gen.market_hours_response import MarketHoursResponse
+from tdaclient.schema.market_hours_response import MarketHoursResponse
 import json
 
 RESPONSE = """

@@ -1,5 +1,5 @@
 import json
-from tdaclient.td.schema.gen.user_principal_response import (
+from tdaclient.schema.user_principal_response import (
     UserPrincipalResponse,
 )
 

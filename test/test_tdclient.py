@@ -3,9 +3,9 @@ from unittest.mock import MagicMock
 import pytest
 from pytest_mock import MockerFixture
 
-from tdaclient.td.tdclient import TDClient
+from tdaclient.client import TDAClient
 from requests import Session
-from tdaclient.td.oauth_request import GrantTypeEnum, OAuthRequest
+from tdaclient.oauth_request import GrantTypeEnum, OAuthRequest
 
 
 @pytest.fixture()
@@ -14,11 +14,11 @@ def session_mock(mocker: MockerFixture) -> MagicMock:
 
 
 @pytest.fixture()
-def tdclient(session_mock: Session) -> TDClient:
-    return TDClient(session=session_mock)
+def tdclient(session_mock: Session) -> TDAClient:
+    return TDAClient(session=session_mock)
 
 
-def test_hello(tdclient: TDClient, session_mock: MagicMock) -> None:
+def test_hello(tdclient: TDAClient, session_mock: MagicMock) -> None:
     response_vals = {
         "access_token": "Hello",
         "refresh_token": "refresh-token-1234",

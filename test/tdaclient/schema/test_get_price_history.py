@@ -1,5 +1,5 @@
 import json
-from tdaclient.td.schema.gen.get_price_history_response import (
+from tdaclient.schema.get_price_history_response import (
     GetPriceHistoryResponse,
 )
 

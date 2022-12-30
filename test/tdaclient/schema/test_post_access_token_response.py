@@ -1,5 +1,5 @@
 import json
-from tdaclient.td.schema.gen.post_access_token_response import (
+from tdaclient.schema.post_access_token_response import (
     PostAccessTokenResponse,
 )
 

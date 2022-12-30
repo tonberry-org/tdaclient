@@ -1,4 +1,4 @@
-from tdaclient.td.schema.gen.get_order_by_path_response import (
+from tdaclient.schema.get_order_by_path_response import (
     GetOrderByPathResponse,
 )
 import json

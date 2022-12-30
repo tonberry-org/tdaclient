@@ -1,4 +1,4 @@
-from tdaclient.td.schema.gen.option_chains_response import OptionChainResponse
+from tdaclient.schema.option_chains_response import OptionChainResponse
 import json
 
 RESPONSE = """

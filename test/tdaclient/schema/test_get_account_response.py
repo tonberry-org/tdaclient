@@ -1,5 +1,5 @@
 import json
-from tdaclient.td.schema.gen.get_account_response import GetAccountResponse
+from tdaclient.schema.get_account_response import GetAccountResponse
 
 RESPONSE = """
 {
