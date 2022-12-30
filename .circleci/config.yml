@@ -1,0 +1,83 @@
+version: "2.1"
+orbs:
+  python: circleci/python@1.0.0
+only_main_filter: &only_main_filter
+  branches:
+    only:
+      - main
+only_not_main_filter: &only_not_main_filter
+  branches:
+    ignore:
+      - main
+attach: &attach_defaults
+  attach_workspace:
+    at: ~/project
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.10.9
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: poetry config virtualenvs.in-project true && poetry install -qn
+      - persist_to_workspace:
+          root: ~/project/
+          paths:
+            - .venv/
+  lint:
+    docker:
+      - image: cimg/python:3.10.9
+    steps:
+      - checkout
+      - *attach_defaults
+      - run:
+          name: "black"
+          command: poetry run black --check .
+      - run:
+          name: "flake8"
+          command: poetry run flake8 .
+      - run:
+          name: "mypy"
+          command: poetry run mypy .
+  test:
+    docker:
+      - image: cimg/python:3.10.9
+    steps:
+      - checkout
+      - *attach_defaults
+      - run:
+          name: pytest
+          command: poetry run coverage run -m pytest
+      - run:
+          name: coverage
+          command: poetry run coverage report
+  package:
+    docker:
+      - image: cimg/python:3.10.9
+    steps:
+      - checkout
+      - *attach_defaults
+      - run:
+          name: package
+          command: make clean package
+      - persist_to_workspace:
+          root: ~/project/
+          paths:
+            - dist/
+workflows:
+  main:
+    jobs:
+      - build
+      - lint:
+          requires:
+            - build
+      - test:
+          requires:
+            - build
+            - lint
+      - package:
+          requires:
+            - build
+            - lint
+            - test

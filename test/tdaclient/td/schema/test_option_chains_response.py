@@ -1,0 +1,162 @@
+from tdaclient.td.schema.gen.option_chains_response import OptionChainResponse
+import json
+
+RESPONSE = """
+{
+    "symbol": "$SPX.X",
+    "status": "SUCCESS",
+    "underlying": {
+        "symbol": "$SPX.X",
+        "description": "S&P 500 INDEX",
+        "change": -21.82,
+        "percentChange": -0.57,
+        "close": 3844.82,
+        "quoteTime": 1672169358076,
+        "tradeTime": 1672169358076,
+        "bid": 3822.33,
+        "ask": 3823.76,
+        "last": 3823.0,
+        "mark": 3823.0,
+        "markChange": -21.82,
+        "markPercentChange": -0.57,
+        "bidSize": 0,
+        "askSize": 0,
+        "highPrice": 3846.65,
+        "lowPrice": 3813.22,
+        "openPrice": 3843.34,
+        "totalVolume": 1023670989,
+        "exchangeName": "IND",
+        "fiftyTwoWeekHigh": 4818.62,
+        "fiftyTwoWeekLow": 3491.58,
+        "delayed": false
+    },
+    "strategy": "SINGLE",
+    "interval": 0.0,
+    "isDelayed": false,
+    "isIndex": true,
+    "interestRate": 4.753,
+    "underlyingPrice": 3823.0,
+    "volatility": 29.0,
+    "daysToExpiration": 0.0,
+    "numberOfContracts": 2,
+    "callExpDateMap": {
+        "2022-12-27:0": {
+            "3825.0": [
+                {
+                    "putCall": "CALL",
+                    "symbol": "SPXW_122722C3825",
+                    "description": "SPXW Dec 27 2022 3825 Call (PM) (Weekly)",
+                    "exchangeName": "OPR",
+                    "bid": 4.9,
+                    "ask": 5.1,
+                    "last": 4.81,
+                    "mark": 5.0,
+                    "bidSize": 97,
+                    "askSize": 53,
+                    "bidAskSize": "97X53",
+                    "lastSize": 0,
+                    "highPrice": 26.42,
+                    "lowPrice": 4.7,
+                    "openPrice": 0.0,
+                    "closePrice": 31.12,
+                    "totalVolume": 5744,
+                    "tradeDate": null,
+                    "tradeTimeInLong": 1672169352555,
+                    "quoteTimeInLong": 1672169358627,
+                    "netChange": -26.31,
+                    "volatility": 9.035,
+                    "delta": 0.454,
+                    "gamma": 0.027,
+                    "theta": -4.519,
+                    "vega": 0.652,
+                    "rho": 0.032,
+                    "openInterest": 840,
+                    "timeValue": 4.81,
+                    "theoreticalOptionValue": 5.1,
+                    "theoreticalVolatility": 29.0,
+                    "optionDeliverablesList": null,
+                    "strikePrice": 3825.0,
+                    "expirationDate": 1672174800000,
+                    "daysToExpiration": 0,
+                    "expirationType": "S",
+                    "lastTradingDay": 1672189200000,
+                    "multiplier": 100.0,
+                    "settlementType": "P",
+                    "deliverableNote": "",
+                    "isIndexOption": null,
+                    "percentChange": -84.54,
+                    "markChange": -26.12,
+                    "markPercentChange": -83.93,
+                    "intrinsicValue": -2.0,
+                    "nonStandard": false,
+                    "mini": false,
+                    "inTheMoney": false,
+                    "pennyPilot": false
+                }
+            ]
+        }
+    },
+    "putExpDateMap": {
+        "2022-12-27:0": {
+            "3825.0": [
+                {
+                    "putCall": "PUT",
+                    "symbol": "SPXW_122722P3825",
+                    "description": "SPXW Dec 27 2022 3825 Put (PM) (Weekly)",
+                    "exchangeName": "OPR",
+                    "bid": 6.7,
+                    "ask": 6.9,
+                    "last": 6.9,
+                    "mark": 6.8,
+                    "bidSize": 92,
+                    "askSize": 38,
+                    "bidAskSize": "92X38",
+                    "lastSize": 0,
+                    "highPrice": 20.0,
+                    "lowPrice": 1.75,
+                    "openPrice": 0.0,
+                    "closePrice": 9.94,
+                    "totalVolume": 15826,
+                    "tradeDate": null,
+                    "tradeTimeInLong": 1672169357792,
+                    "quoteTimeInLong": 1672169358632,
+                    "netChange": -3.04,
+                    "volatility": 9.035,
+                    "delta": -0.546,
+                    "gamma": 0.027,
+                    "theta": -4.15,
+                    "vega": 0.652,
+                    "rho": -0.039,
+                    "openInterest": 1049,
+                    "timeValue": 4.9,
+                    "theoreticalOptionValue": 6.85,
+                    "theoreticalVolatility": 29.0,
+                    "optionDeliverablesList": null,
+                    "strikePrice": 3825.0,
+                    "expirationDate": 1672174800000,
+                    "daysToExpiration": 0,
+                    "expirationType": "S",
+                    "lastTradingDay": 1672189200000,
+                    "multiplier": 100.0,
+                    "settlementType": "P",
+                    "deliverableNote": "",
+                    "isIndexOption": null,
+                    "percentChange": -30.58,
+                    "markChange": -3.14,
+                    "markPercentChange": -31.58,
+                    "intrinsicValue": 2.0,
+                    "nonStandard": false,
+                    "mini": false,
+                    "inTheMoney": true,
+                    "pennyPilot": false
+                }
+            ]
+        }
+    }
+}
+"""
+
+
+def test_option_chain_response() -> None:
+    response = OptionChainResponse(response=json.loads(RESPONSE))
+    print(response)

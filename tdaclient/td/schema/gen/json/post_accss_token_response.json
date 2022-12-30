@@ -1,0 +1,33 @@
+{
+  "$id": "post_access_token_response.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PostAccessTokenResponse",
+  "type": "object",
+  "properties": {
+    "response": {
+      "type": "object",
+      "properties": {
+        "access_token": {
+          "type": "string"
+        },
+        "refresh_token": {
+          "type": "string"
+        },
+        "token_type": {
+          "type": "string"
+        },
+        "expires_in": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "refresh_token_expires_in": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+  }
+}
