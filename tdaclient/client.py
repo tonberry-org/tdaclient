@@ -6,7 +6,18 @@ import logging
 from typing import Optional, TypedDict, Any, Mapping
 import http.client as http_client
 
-from tdaclient.oauth_request import OAuthRequest, OAuthResponse
+from tdaclient.schema import (
+    PostAccessTokenRequest,
+    PostAccessTokenResponse,
+    UserPrincipalResponse,
+    GetAccountResponse,
+    GetQuoteRequest,
+    GetQuoteResponse,
+    OptionChainRequest,
+    OptionChainResponse,
+)
+from tdaclient.schema.get_account_request import GetAccountRequest
+from tdaclient.schema.user_principal_request import UserPrincipalRequest
 
 http_client.HTTPConnection.debuglevel = 1
 
@@ -75,16 +86,40 @@ class TDAClient:
             result.update(headers)
         return result
 
-    def userprincipals(self, access_token: str) -> dict[str, object]:
-        return dict(
-            self.__get("userprincipals", headers=self.__auth_header(access_token))
+    def userprincipals(self, request: UserPrincipalRequest) -> UserPrincipalResponse:
+        return UserPrincipalResponse(
+            response=self.__get(
+                "userprincipals",
+                headers=self.__auth_header(request.authorization.access_token),
+            )
         )
 
-    def oauth(self, oauth_request: OAuthRequest) -> OAuthResponse:
-        response = self.__post("oauth2/token", data=oauth_request)
-        return OAuthResponse(**response)
+    def oauth(self, request: PostAccessTokenRequest) -> PostAccessTokenResponse:
+        response = self.__post("oauth2/token", data=request.dict())
+        return PostAccessTokenResponse(response=response)
 
-    def get_account(self, account_id: str, access_token: str) -> Any:
-        return self.__get(
-            f"accounts/{account_id}", headers=self.__auth_header(access_token)
+    def get_account(self, request: GetAccountRequest) -> GetAccountResponse:
+        return GetAccountResponse(
+            response=self.__get(
+                f"accounts/{request.request.accountId}",
+                headers=self.__auth_header(request.authorization.access_token),
+            )
         )
+
+    def get_quote(self, get_quote_request: GetQuoteRequest) -> GetQuoteResponse:
+        response = self.__get(
+            f"marketdata/{get_quote_request.request.symbol}/quotes",
+            headers=self.__auth_header(get_quote_request.authorization.access_token),
+        )
+        return GetQuoteResponse(response=response)
+
+    def get_option_chain(
+        self, get_option_chain_request: OptionChainRequest
+    ) -> OptionChainResponse:
+        response = self.__get(
+            "marketdata/chains",
+            headers=self.__auth_header(
+                get_option_chain_request.authorization.access_token
+            ),
+        )
+        return OptionChainResponse(response=response)

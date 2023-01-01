@@ -3,87 +3,96 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "OptionChainRequest",
   "type": "object",
+  "required": ["request", "authorization"],
   "properties": {
-    "apikey": {
-      "type": "string"
+    "authorization": {
+      "$ref": "authorization.json#/definitions/Authorization"
     },
-    "symbol": {
-      "type": "string"
-    },
-    "contractType": {
-      "type": "string",
-      "enum": ["CALL", "PUT", "ALL"]
-    },
-    "strikeCount": {
-      "type": "integer"
-    },
-    "includeQuotes": {
-      "type": "boolean"
-    },
-    "strategy": {
-      "type": "string",
-      "enum": [
-        "COVERED",
-        "VERTICAL",
-        "CALENDAR",
-        "STRANGLE",
-        "STRADDLE",
-        "BUTTERFLY",
-        "CONDOR",
-        "DIAGONAL",
-        "COLLAR",
-        "ROLL"
-      ]
-    },
-    "interval": {
-      "type": "integer"
-    },
-    "strike": {
-      "type": "number"
-    },
-    "range": {
-      "type": "string",
-      "enum": ["ITM", "NTM", "OTM", "SAK", "SBK", "SNK", "ALL"]
-    },
-    "fromDate": {
-      "type": "string"
-    },
-    "toDate": {
-      "type": "string"
-    },
-    "volatility": {
-      "type": "string"
-    },
-    "underlyingPrice": {
-      "type": "number"
-    },
-    "interestRate": {
-      "type": "number"
-    },
-    "daysToExpiration": {
-      "type": "number"
-    },
-    "expMonth": {
-      "type": "string",
-      "enum": [
-        "ALL",
-        "JAN",
-        "FEB",
-        "MAR",
-        "APR",
-        "MAY",
-        "JUN",
-        "JUL",
-        "AUG",
-        "SEP",
-        "OCT",
-        "NOV",
-        "DEV"
-      ]
-    },
-    "optionType": {
-      "type": "string",
-      "enum": ["S", "NS", "ALL"]
+    "request": {
+      "type": "object",
+      "properties": {
+        "apikey": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        },
+        "contractType": {
+          "type": "string",
+          "enum": ["CALL", "PUT", "ALL"]
+        },
+        "strikeCount": {
+          "type": "integer"
+        },
+        "includeQuotes": {
+          "type": "boolean"
+        },
+        "strategy": {
+          "type": "string",
+          "enum": [
+            "COVERED",
+            "VERTICAL",
+            "CALENDAR",
+            "STRANGLE",
+            "STRADDLE",
+            "BUTTERFLY",
+            "CONDOR",
+            "DIAGONAL",
+            "COLLAR",
+            "ROLL"
+          ]
+        },
+        "interval": {
+          "type": "integer"
+        },
+        "strike": {
+          "type": "number"
+        },
+        "range": {
+          "type": "string",
+          "enum": ["ITM", "NTM", "OTM", "SAK", "SBK", "SNK", "ALL"]
+        },
+        "fromDate": {
+          "type": "string"
+        },
+        "toDate": {
+          "type": "string"
+        },
+        "volatility": {
+          "type": "string"
+        },
+        "underlyingPrice": {
+          "type": "number"
+        },
+        "interestRate": {
+          "type": "number"
+        },
+        "daysToExpiration": {
+          "type": "number"
+        },
+        "expMonth": {
+          "type": "string",
+          "enum": [
+            "ALL",
+            "JAN",
+            "FEB",
+            "MAR",
+            "APR",
+            "MAY",
+            "JUN",
+            "JUL",
+            "AUG",
+            "SEP",
+            "OCT",
+            "NOV",
+            "DEV"
+          ]
+        },
+        "optionType": {
+          "type": "string",
+          "enum": ["S", "NS", "ALL"]
+        }
+      }
     }
   }
 }
