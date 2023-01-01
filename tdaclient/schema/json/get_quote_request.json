@@ -1,0 +1,15 @@
+{
+  "$id": "get_quote_request.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GetQuoteRequest",
+  "type": "object",
+  "properties": {
+    "request": {
+      "type": "object",
+      "required": ["apiKey"],
+      "properties": {
+        "apiKey": { "type": "string" }
+      }
+    }
+  }
+}

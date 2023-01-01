@@ -4,24 +4,29 @@
   "title": "PostAccessTokenRequest",
   "type": "object",
   "properties": {
-    "grant_type": {
-      "type": "string",
-      "enum": ["authorization_code", "refresh_token"]
-    },
-    "refresh_token": {
-      "type": "string"
-    },
+    "request": {
+      "type": "object",
+      "required": ["grant_type", "client_id"],
+      "properties": {
+        "grant_type": {
+          "type": "string",
+          "enum": ["authorization_code", "refresh_token"]
+        },
+        "refresh_token": {
+          "type": "string"
+        },
 
-    "access_type": {
-      "type": "string",
-      "enum": ["offline"]
-    },
-    "code": {
-      "type": "string"
-    },
-    "redirect_uri": {
-      "type": "string"
+        "access_type": {
+          "type": "string",
+          "enum": ["offline"]
+        },
+        "code": {
+          "type": "string"
+        },
+        "redirect_uri": {
+          "type": "string"
+        }
+      }
     }
-  },
-  "required": ["grant_type", "redirect_uri"]
+  }
 }
