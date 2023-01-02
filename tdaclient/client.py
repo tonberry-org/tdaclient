@@ -99,7 +99,7 @@ class TDAClient:
         )
 
     def oauth(self, request: PostAccessTokenRequest) -> PostAccessTokenResponse:
-        response = self.__post("oauth2/token", data=request.dict())
+        response = self.__post("oauth2/token", data=request.input.dict())
         return PostAccessTokenResponse(output=response)
 
     def get_account(self, request: GetAccountRequest) -> GetAccountResponse:
@@ -122,6 +122,7 @@ class TDAClient:
     ) -> OptionChainResponse:
         response = self.__get(
             "marketdata/chains",
+            query_params=get_option_chain_request.input.dict(),
             headers=self.__auth_header(
                 get_option_chain_request.authorization.access_token
             ),
