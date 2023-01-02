@@ -58,6 +58,8 @@ class TDAClient:
             params=query_params,
             headers=self.__headers(headers),
         )
+        if response.status_code != 200:
+            raise Exception(response.text)
         return dict(response.json())
 
     def __post(
@@ -73,6 +75,8 @@ class TDAClient:
             data=data,
             params=query_params,
         )
+        if response.status_code != 200:
+            raise Exception(response.text)
         return dict(response.json())
 
     def __auth_header(self, access_token: Optional[str]) -> dict[str, str]:
