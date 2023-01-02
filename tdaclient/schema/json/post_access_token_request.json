@@ -15,6 +15,9 @@
       "title": "PostActionTokenInput",
       "required": ["grant_type", "client_id"],
       "properties": {
+        "client_id": {
+          "type": "string"
+        },
         "grant_type": {
           "type": "string",
           "enum": ["authorization_code", "refresh_token"]
