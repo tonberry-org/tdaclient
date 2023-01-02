@@ -90,5 +90,5 @@ RESPONSE = """
 
 
 def test_get_order_response() -> None:
-    response = GetOrderResponse(response=json.loads(RESPONSE))
+    response = GetOrderResponse(output=json.loads(RESPONSE))
     print(response)

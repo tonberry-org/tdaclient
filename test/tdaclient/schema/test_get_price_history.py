@@ -38,5 +38,5 @@ RESPONSE = """
 
 
 def test_get_price_history_response() -> None:
-    response = GetPriceHistoryResponse(response=json.loads(RESPONSE))
+    response = GetPriceHistoryResponse(output=json.loads(RESPONSE))
     print(response)

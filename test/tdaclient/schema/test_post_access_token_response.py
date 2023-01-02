@@ -16,5 +16,5 @@ RESPONSE = """
 
 
 def test_post_access_token_response() -> None:
-    response = PostAccessTokenResponse(response=json.loads(RESPONSE))
+    response = PostAccessTokenResponse(output=json.loads(RESPONSE))
     print(response)

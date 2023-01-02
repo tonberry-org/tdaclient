@@ -44,5 +44,5 @@ RESPONSE = """
 
 
 def test_get_market_hours() -> None:
-    response = MarketHoursResponse(response=json.loads(RESPONSE))
+    response = MarketHoursResponse(output=json.loads(RESPONSE))
     print(response)

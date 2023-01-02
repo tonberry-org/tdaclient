@@ -3,8 +3,12 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "MarketHoursResponse",
   "type": "object",
+  "required": ["output"],
   "properties": {
-    "response": {
+    "output": { "$ref": "#/definitions/MarketHoursOutput" }
+  },
+  "definitions": {
+    "MarketHoursOutput": {
       "type": "object",
       "properties": {
         "category": {

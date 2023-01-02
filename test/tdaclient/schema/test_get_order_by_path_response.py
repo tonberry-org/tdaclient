@@ -533,5 +533,5 @@ RESPONSE = """
 
 
 def test_get_code_by_path_response() -> None:
-    response = GetOrderByPathResponse(response=json.loads(RESPONSE))
+    response = GetOrderByPathResponse(output=json.loads(RESPONSE))
     print(response)

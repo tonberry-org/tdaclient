@@ -3,9 +3,16 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "PostAccessTokenRequest",
   "type": "object",
+  "required": ["input"],
   "properties": {
-    "request": {
+    "input": {
+      "$ref": "#/definitions/PostActionTokenInput"
+    }
+  },
+  "definitions": {
+    "PostActionTokenInput": {
       "type": "object",
+      "title": "PostActionTokenInput",
       "required": ["grant_type", "client_id"],
       "properties": {
         "grant_type": {

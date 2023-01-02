@@ -3,9 +3,14 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "PostAccessTokenResponse",
   "type": "object",
+  "required": ["output"],
   "properties": {
-    "response": {
+    "output": { "$ref": "#/definitions/PostAccessTokenOutput" }
+  },
+  "definitions": {
+    "PostAccessTokenOutput": {
       "type": "object",
+      "required": ["access_token", "expires_in"],
       "properties": {
         "access_token": {
           "type": "string"

@@ -73,5 +73,5 @@ RESPONSE = """
 
 
 def test_user_principal_response() -> None:
-    response = UserPrincipalResponse(response=json.loads(RESPONSE))
+    response = UserPrincipalResponse(output=json.loads(RESPONSE))
     print(response)

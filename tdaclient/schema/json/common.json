@@ -101,7 +101,7 @@
       "title": "Option",
       "type": "object",
       "allOf": [{ "$ref": "#/definitions/Instrument" }],
-      "required": ["assetType"],
+      "required": ["assetType", "putCall", "underlyingSymbol"],
       "properties": {
         "assetType": {
           "type": "string",

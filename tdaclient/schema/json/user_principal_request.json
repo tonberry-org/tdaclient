@@ -2,12 +2,15 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "UserPrincipalRequest",
   "type": "object",
-  "required": ["authorization", "request"],
+  "required": ["authorization", "input"],
   "properties": {
     "authorization": {
       "$ref": "authorization.json#/definitions/Authorization"
     },
-    "request": {
+    "input": { "$ref": "#/definitions/UserPrincipalInput" }
+  },
+  "definitions": {
+    "UserPrincipalInput": {
       "type": "object",
       "properties": {
         "fields": {

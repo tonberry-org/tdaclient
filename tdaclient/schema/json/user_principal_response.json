@@ -2,8 +2,12 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "UserPrincipalResponse",
   "type": "object",
+  "required": ["output"],
   "properties": {
-    "response": {
+    "output": { "$ref": "#/definitions/UserPrincipalOutput" }
+  },
+  "definitions": {
+    "UserPrincipalOutput": {
       "type": "object",
       "properties": {
         "authToken": {

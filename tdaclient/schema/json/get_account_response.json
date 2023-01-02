@@ -3,8 +3,14 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "GetAccountResponse",
   "type": "object",
+  "required": ["output"],
   "properties": {
-    "response": {
+    "output": {
+      "$ref": "#/definitions/GetAccountOutput"
+    }
+  },
+  "definitions": {
+    "GetAccountOutput": {
       "type": "object",
       "properties": {
         "securitiesAccount": {
@@ -16,9 +22,7 @@
           ]
         }
       }
-    }
-  },
-  "definitions": {
+    },
     "SecuritiesAccount": {
       "type": "object",
       "properties": {

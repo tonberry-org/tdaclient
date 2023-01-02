@@ -158,5 +158,5 @@ RESPONSE = """
 
 
 def test_option_chain_response() -> None:
-    response = OptionChainResponse(response=json.loads(RESPONSE))
+    response = OptionChainResponse(output=json.loads(RESPONSE))
     print(response)

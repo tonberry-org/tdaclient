@@ -3,8 +3,12 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "GetOrderByPathResponse",
   "type": "object",
+  "required": ["output"],
   "properties": {
-    "response": {
+    "output": { "$ref": "#/definitions/OrderByPathOutput" }
+  },
+  "definitions": {
+    "GetOrderByPathOutput": {
       "type": "array",
       "items": {
         "type": "object",
@@ -318,12 +322,14 @@
           },
           "replacingOrderCollection": {
             "type": "array",
+            "items": { "type": "string" },
             "xml": {
               "name": "replacingOrder",
               "wrapped": true
             }
           },
           "childOrderStrategies": {
+            "items": { "type": "string" },
             "type": "array",
             "xml": {
               "name": "childOrder",

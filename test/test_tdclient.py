@@ -5,7 +5,9 @@ from pytest_mock import MockerFixture
 
 from tdaclient.client import TDAClient
 from requests import Session
-from tdaclient.oauth_request import GrantTypeEnum, OAuthRequest
+from tdaclient.schema import PostAccessTokenRequest
+from tdaclient.schema.post_access_token_request import GrantType
+from tdaclient.schema.post_access_token_request import PostActionTokenInput
 
 
 @pytest.fixture()
@@ -27,18 +29,19 @@ def test_hello(tdclient: TDAClient, session_mock: MagicMock) -> None:
         "refresh_token_expires_in": 7776000,
         "token_type": "Bearer",
     }
-    response = MagicMock()
-    response.json.return_value = response_vals
-    session_mock.post.return_value = response
-    assert (
-        tdclient.oauth(
-            OAuthRequest(
-                grant_type=GrantTypeEnum.AUTHORIZATION_CODE,
+    response_mock = MagicMock()
+    response_mock.json.return_value = response_vals
+    session_mock.post.return_value = response_mock
+
+    response = tdclient.oauth(
+        PostAccessTokenRequest(
+            input=PostActionTokenInput(
+                grant_type=GrantType.authorization_code,
                 access_type="offline",
                 code="AAAAA",
                 client_id="CLIENT_ID@AMERI.TD",
                 redirect_uri="https://127.0.0.1",
             )
         )
-        == response_vals
     )
+    assert response.output.access_token == response_vals["access_token"]

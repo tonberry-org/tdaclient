@@ -374,5 +374,5 @@ RESPONSE = """
 
 
 def test_get_account_response() -> None:
-    response = GetAccountResponse(response=json.loads(RESPONSE))
+    response = GetAccountResponse(output=json.loads(RESPONSE))
     print(response)

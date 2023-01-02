@@ -1,13 +1,13 @@
 from tdaclient.schema.post_access_token_request import (
     PostAccessTokenRequest,
-    Request,
+    PostActionTokenInput,
     GrantType,
 )
 
 
 def test_post_access_token() -> None:
     request = PostAccessTokenRequest(
-        request={
+        input={
             "grant_type": "authorization_code",
             "access_type": "offline",
             "code": "1234",
@@ -18,7 +18,7 @@ def test_post_access_token() -> None:
     print(request)
 
     request = PostAccessTokenRequest(
-        request=Request(
+        input=PostActionTokenInput(
             grant_type=GrantType.authorization_code,
             access_type="offline",
             code="1234",
@@ -32,7 +32,7 @@ def test_post_access_token() -> None:
 def test_post_access_token_refresh() -> None:
 
     request = PostAccessTokenRequest(
-        request=Request(
+        input=PostActionTokenInput(
             grant_type=GrantType.refresh_token,
             client_id="clien_id1234",
             refresh_token="refresh_token_1234",

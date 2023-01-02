@@ -33,6 +33,6 @@ RESPONSE = """
 
 
 def test_get_quote_response() -> None:
-    response = GetQuoteResponse(response=json.loads(RESPONSE))
+    response = GetQuoteResponse(output=json.loads(RESPONSE))
 
     print(response)

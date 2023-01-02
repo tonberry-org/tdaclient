@@ -88,7 +88,7 @@ class TDAClient:
 
     def userprincipals(self, request: UserPrincipalRequest) -> UserPrincipalResponse:
         return UserPrincipalResponse(
-            response=self.__get(
+            output=self.__get(
                 "userprincipals",
                 headers=self.__auth_header(request.authorization.access_token),
             )
@@ -96,22 +96,22 @@ class TDAClient:
 
     def oauth(self, request: PostAccessTokenRequest) -> PostAccessTokenResponse:
         response = self.__post("oauth2/token", data=request.dict())
-        return PostAccessTokenResponse(response=response)
+        return PostAccessTokenResponse(output=response)
 
     def get_account(self, request: GetAccountRequest) -> GetAccountResponse:
         return GetAccountResponse(
-            response=self.__get(
-                f"accounts/{request.request.accountId}",
+            output=self.__get(
+                f"accounts/{request.input.accountId}",
                 headers=self.__auth_header(request.authorization.access_token),
             )
         )
 
     def get_quote(self, get_quote_request: GetQuoteRequest) -> GetQuoteResponse:
         response = self.__get(
-            f"marketdata/{get_quote_request.request.symbol}/quotes",
+            f"marketdata/{get_quote_request.input.symbol}/quotes",
             headers=self.__auth_header(get_quote_request.authorization.access_token),
         )
-        return GetQuoteResponse(response=response)
+        return GetQuoteResponse(output=response)
 
     def get_option_chain(
         self, get_option_chain_request: OptionChainRequest
@@ -122,4 +122,4 @@ class TDAClient:
                 get_option_chain_request.authorization.access_token
             ),
         )
-        return OptionChainResponse(response=response)
+        return OptionChainResponse(output=response)
