@@ -49,7 +49,7 @@
           "type": "integer"
         },
         "strike": {
-          "type": "number"
+          "type": "string"
         },
         "range": {
           "type": "string",
@@ -65,13 +65,13 @@
           "type": "string"
         },
         "underlyingPrice": {
-          "type": "number"
+          "type": "string"
         },
         "interestRate": {
-          "type": "number"
+          "type": "string"
         },
         "daysToExpiration": {
-          "type": "number"
+          "type": "string"
         },
         "expMonth": {
           "type": "string",

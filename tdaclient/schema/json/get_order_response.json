@@ -73,16 +73,16 @@
           ]
         },
         "quantity": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "filledQuantity": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "remainingQuantity": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "requestedDestination": {
           "type": "string",
@@ -109,8 +109,8 @@
           "format": "date-time"
         },
         "stopPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "stopPriceLinkBasis": {
           "type": "string",
@@ -131,8 +131,8 @@
           "enum": ["VALUE", "PERCENT", "TICK"]
         },
         "stopPriceOffset": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "stopType": {
           "type": "string",
@@ -157,8 +157,8 @@
           "enum": ["VALUE", "PERCENT", "TICK"]
         },
         "price": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "taxLotMethod": {
           "type": "string",
@@ -228,8 +228,8 @@
                 "enum": ["OPENING", "CLOSING", "AUTOMATIC"]
               },
               "quantity": {
-                "type": "number",
-                "format": "double"
+                "type": "string",
+                "format": "decimal"
               },
               "quantityType": {
                 "type": "string",
@@ -239,8 +239,8 @@
           }
         },
         "activationPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "specialInstruction": {
           "type": "string",

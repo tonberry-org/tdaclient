@@ -47,12 +47,12 @@
           "format": "date-time"
         },
         "variableRate": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "factor": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         }
       },
       "required": ["assetType"]
@@ -136,8 +136,8 @@
                 "type": "string"
               },
               "deliverableUnits": {
-                "type": "number",
-                "format": "double"
+                "type": "string",
+                "format": "decimal"
               },
               "currencyType": {
                 "type": "string",
@@ -201,12 +201,12 @@
           "enum": ["FILL"]
         },
         "quantity": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "orderRemainingQuantity": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "executionLegs": {
           "type": "array",
@@ -222,16 +222,16 @@
                 "format": "int32"
               },
               "quantity": {
-                "type": "number",
-                "format": "double"
+                "type": "string",
+                "format": "decimal"
               },
               "mismarkedQuantity": {
-                "type": "number",
-                "format": "double"
+                "type": "string",
+                "format": "decimal"
               },
               "price": {
-                "type": "number",
-                "format": "double"
+                "type": "string",
+                "format": "decimal"
               },
               "time": {
                 "type": "string",

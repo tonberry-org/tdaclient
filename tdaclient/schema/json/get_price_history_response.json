@@ -18,8 +18,8 @@
             "type": "object",
             "properties": {
               "close": {
-                "type": "number",
-                "format": "double",
+                "type": "string",
+                "format": "decimal",
                 "description": "Close"
               },
               "datetime": {
@@ -28,18 +28,18 @@
                 "description": "DateTime"
               },
               "high": {
-                "type": "number",
-                "format": "double",
+                "type": "string",
+                "format": "decimal",
                 "description": "High"
               },
               "low": {
-                "type": "number",
-                "format": "double",
+                "type": "string",
+                "format": "decimal",
                 "description": "Low"
               },
               "open": {
-                "type": "number",
-                "format": "double",
+                "type": "string",
+                "format": "decimal",
                 "description": "Open"
               },
               "volume": {
