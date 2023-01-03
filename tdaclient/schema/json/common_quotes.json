@@ -17,12 +17,12 @@
           "type": "string"
         },
         "closePrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "netChange": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "totalVolume": {
           "type": "integer",
@@ -43,28 +43,28 @@
           "format": "int32"
         },
         "52WkHigh": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "52WkLow": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "nAV": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "peRatio": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "divAmount": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "divYield": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "divDate": {
           "type": "string"
@@ -86,16 +86,16 @@
           "type": "string"
         },
         "bidPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "askPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lastPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "bidId": {
           "type": "string"
@@ -104,16 +104,16 @@
           "type": "string"
         },
         "highPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lowPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "closePriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "exchange": {
           "type": "string"
@@ -125,16 +125,16 @@
           "type": "string"
         },
         "openPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "changeInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "futurePercentChange": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "exchangeName": {
           "type": "string"
@@ -143,20 +143,20 @@
           "type": "string"
         },
         "openInterest": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "mark": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "tick": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "tickAmount": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "product": {
           "type": "string"
@@ -171,15 +171,15 @@
           "type": "boolean"
         },
         "futureMultiplier": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "futureIsActive": {
           "type": "boolean"
         },
         "futureSettlementPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "futureActiveSymbol": {
           "type": "string"
@@ -201,43 +201,43 @@
           "type": "string"
         },
         "bidPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "askPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lastPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "highPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lowPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "closePriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "description": {
           "type": "string"
         },
         "openPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "netChangeInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "openInterest": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "exchangeName": {
           "type": "string"
@@ -246,24 +246,24 @@
           "type": "string"
         },
         "volatility": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "moneyIntrinsicValueInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "multiplierInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "digits": {
           "type": "integer",
           "format": "int32"
         },
         "strikePriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "contractType": {
           "type": "string"
@@ -272,40 +272,40 @@
           "type": "string"
         },
         "timeValueInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "deltaInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "gammaInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "thetaInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "vegaInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "rhoInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "mark": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "tick": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "tickAmount": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "futureIsTradable": {
           "type": "boolean"
@@ -314,8 +314,8 @@
           "type": "string"
         },
         "futurePercentChange": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "futureIsActive": {
           "type": "boolean"
@@ -351,28 +351,28 @@
           "type": "string"
         },
         "lastPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "openPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "highPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lowPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "closePrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "netChange": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "totalVolume": {
           "type": "integer",
@@ -393,12 +393,12 @@
           "format": "int32"
         },
         "52WkHigh": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "52WkLow": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "securityStatus": {
           "type": "string"
@@ -420,48 +420,48 @@
           "type": "string"
         },
         "bidPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "bidSize": {
           "type": "integer",
           "format": "int32"
         },
         "askPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "askSize": {
           "type": "integer",
           "format": "int32"
         },
         "lastPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lastSize": {
           "type": "integer",
           "format": "int32"
         },
         "openPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "highPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lowPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "closePrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "netChange": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "totalVolume": {
           "type": "integer",
@@ -476,28 +476,28 @@
           "format": "int32"
         },
         "mark": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "openInterest": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "volatility": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "moneyIntrinsicValue": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "multiplier": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "strikePrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "contractType": {
           "type": "string"
@@ -506,42 +506,42 @@
           "type": "string"
         },
         "timeValue": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "deliverables": {
           "type": "string"
         },
         "delta": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "gamma": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "theta": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "vega": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "rho": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "securityStatus": {
           "type": "string"
         },
         "theoreticalOptionValue": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "underlyingPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "uvExpirationType": {
           "type": "string"
@@ -569,28 +569,28 @@
           "type": "string"
         },
         "bidPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "askPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lastPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "highPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lowPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "closePriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "exchange": {
           "type": "string"
@@ -599,16 +599,16 @@
           "type": "string"
         },
         "openPriceInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "changeInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "percentChange": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "exchangeName": {
           "type": "string"
@@ -621,12 +621,12 @@
           "type": "string"
         },
         "tick": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "tickAmount": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "product": {
           "type": "string"
@@ -641,16 +641,16 @@
           "type": "string"
         },
         "52WkHighInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "52WkLowInDouble": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "mark": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         }
       }
     },
@@ -669,8 +669,8 @@
           "type": "string"
         },
         "bidPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "bidSize": {
           "type": "integer",
@@ -680,8 +680,8 @@
           "type": "string"
         },
         "askPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "askSize": {
           "type": "integer",
@@ -691,8 +691,8 @@
           "type": "string"
         },
         "lastPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lastSize": {
           "type": "integer",
@@ -702,24 +702,24 @@
           "type": "string"
         },
         "openPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "highPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lowPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "closePrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "netChange": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "totalVolume": {
           "type": "integer",
@@ -734,8 +734,8 @@
           "format": "int32"
         },
         "mark": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "exchange": {
           "type": "string"
@@ -752,32 +752,32 @@
           "default": false
         },
         "volatility": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "digits": {
           "type": "integer",
           "format": "int32"
         },
         "52WkHigh": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "52WkLow": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "peRatio": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "divAmount": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "divYield": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "divDate": {
           "type": "string"
@@ -786,16 +786,16 @@
           "type": "string"
         },
         "regularMarketLastPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "regularMarketLastSize": {
           "type": "integer",
           "format": "int32"
         },
         "regularMarketNetChange": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "regularMarketTradeTimeInLong": {
           "type": "integer",
@@ -818,8 +818,8 @@
           "type": "string"
         },
         "bidPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "bidSize": {
           "type": "integer",
@@ -829,8 +829,8 @@
           "type": "string"
         },
         "askPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "askSize": {
           "type": "integer",
@@ -840,8 +840,8 @@
           "type": "string"
         },
         "lastPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lastSize": {
           "type": "integer",
@@ -851,24 +851,24 @@
           "type": "string"
         },
         "openPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "highPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "lowPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "closePrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "netChange": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "totalVolume": {
           "type": "integer",
@@ -883,8 +883,8 @@
           "format": "int32"
         },
         "mark": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "exchange": {
           "type": "string"
@@ -901,32 +901,32 @@
           "default": false
         },
         "volatility": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "digits": {
           "type": "integer",
           "format": "int32"
         },
         "52WkHigh": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "52WkLow": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "peRatio": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "divAmount": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "divYield": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "divDate": {
           "type": "string"
@@ -935,16 +935,16 @@
           "type": "string"
         },
         "regularMarketLastPrice": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "regularMarketLastSize": {
           "type": "integer",
           "format": "int32"
         },
         "regularMarketNetChange": {
-          "type": "number",
-          "format": "double"
+          "type": "string",
+          "format": "decimal"
         },
         "regularMarketTradeTimeInLong": {
           "type": "integer",
