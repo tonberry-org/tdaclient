@@ -117,6 +117,14 @@ class TDAClient:
         )
         return GetQuoteResponse(output=response)
 
+    def get_quotes(self, get_quote_request: GetQuoteRequest) -> GetQuoteResponse:
+        response = self.__get(
+            "marketdata/quotes",
+            query_params=get_quote_request.input.dict(),
+            headers=self.__auth_header(get_quote_request.authorization.access_token),
+        )
+        return GetQuoteResponse(output=response)
+
     def get_option_chain(
         self, get_option_chain_request: OptionChainRequest
     ) -> OptionChainResponse:
