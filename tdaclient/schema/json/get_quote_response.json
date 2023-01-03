@@ -5,27 +5,25 @@
   "type": "object",
   "required": ["output"],
   "properties": {
-    "output": { "$ref": "#/definitions/GetQuoteOutput" }
+    "output": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "discriminator": "assetType",
+        "oneOf": [
+          { "$ref": "#/definitions/MutualFundQuote" },
+          { "$ref": "#/definitions/FutureQuote" },
+          { "$ref": "#/definitions/FutureOptionQuote" },
+          { "$ref": "#/definitions/IndexQuote" },
+          { "$ref": "#/definitions/OptionQuote" },
+          { "$ref": "#/definitions/ForexQuote" },
+          { "$ref": "#/definitions/ETFQuote" },
+          { "$ref": "#/definitions/EquitiesQuote" }
+        ]
+      }
+    }
   },
   "definitions": {
-    "GetQuouteOutput": {
-      "type": "object",
-      "additionalProperties": { "$ref": "#/definitions/Quote" }
-    },
-    "Quote": {
-      "type": "object",
-      "discriminator": "assetType",
-      "oneOf": [
-        { "$ref": "#/definitions/MutualFundQuote" },
-        { "$ref": "#/definitions/FutureQuote" },
-        { "$ref": "#/definitions/FutureOptionQuote" },
-        { "$ref": "#/definitions/IndexQuote" },
-        { "$ref": "#/definitions/OptionQuote" },
-        { "$ref": "#/definitions/ForexQuote" },
-        { "$ref": "#/definitions/ETFQuote" },
-        { "$ref": "#/definitions/EquitiesQuote" }
-      ]
-    },
     "MutualFundQuote": {
       "title": "MutualFundQuote",
       "type": "object",
