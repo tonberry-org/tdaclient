@@ -15,6 +15,8 @@ from tdaclient.schema import (
     GetQuoteResponse,
     OptionChainRequest,
     OptionChainResponse,
+    GetQuotesRequest,
+    GetQuotesResponse,
 )
 from tdaclient.schema.get_account_request import GetAccountRequest
 from tdaclient.schema.user_principal_request import UserPrincipalRequest
@@ -117,13 +119,16 @@ class TDAClient:
         )
         return GetQuoteResponse(output=response)
 
-    def get_quotes(self, get_quote_request: GetQuoteRequest) -> GetQuoteResponse:
+    def get_quotes(self, get_quotes_request: GetQuotesRequest) -> GetQuotesResponse:
         response = self.__get(
             "marketdata/quotes",
-            query_params=get_quote_request.input.dict(),
-            headers=self.__auth_header(get_quote_request.authorization.access_token),
+            query_params={
+                "apikey": get_quotes_request.input.apiKey,
+                "symbol": ",".join(get_quotes_request.input.symbols),
+            },
+            headers=self.__auth_header(get_quotes_request.authorization.access_token),
         )
-        return GetQuoteResponse(output=response)
+        return GetQuotesResponse(output=response)
 
     def get_option_chain(
         self, get_option_chain_request: OptionChainRequest
