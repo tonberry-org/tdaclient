@@ -147,9 +147,13 @@ class TDAClient:
     def market_hours(
         self, market_hours_request: MarketHoursRequest
     ) -> MarketHoursResponse:
+        query_params = {
+            "markets": ",".join(market_hours_request.input.markets),
+            "Date": market_hours_request.input.date.isoformat(),
+        }
         response = self.__get(
             "marketdata/hours",
             headers=self.__auth_header(market_hours_request.authorization.access_token),
-            query_params=market_hours_request.input.dict(),
+            query_params=query_params,
         )
         return MarketHoursResponse(output=response)
