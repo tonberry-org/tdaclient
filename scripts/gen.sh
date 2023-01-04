@@ -5,5 +5,5 @@ datamodel-codegen --input tdaclient/schema/json\
    --output tdaclient/schema\
     --enum-field-as-literal one\
     --use-subclass-enum\
-    --target-python-version 3.11\
+    --target-python-version 3.9\
     --reuse-model

@@ -13,7 +13,7 @@
   "definitions": {
     "MarketHoursInput": {
       "type": "object",
-      "required": ["apiKey", "symbols"],
+      "required": ["apiKey", "symbols", "markets"],
       "properties": {
         "apiKey": { "type": "string" },
         "markets": {

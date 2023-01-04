@@ -31,6 +31,7 @@ def test_hello(tdclient: TDAClient, session_mock: MagicMock) -> None:
     }
     response_mock = MagicMock()
     response_mock.json.return_value = response_vals
+    response_mock.status_code = 200
     session_mock.post.return_value = response_mock
 
     response = tdclient.oauth(
