@@ -24,7 +24,7 @@
             "enum": ["EQUITY", "OPTION", "FUTURE", "BOND", "FOREX"]
           }
         },
-        "date": { "type": "string" }
+        "date": { "type": "string", "format": "date" }
       }
     }
   }
