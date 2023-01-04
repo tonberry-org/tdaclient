@@ -9,6 +9,7 @@ from tdaclient.schema.get_price_history_response import GetPriceHistoryResponse
 from tdaclient.schema.get_quote_request import GetQuoteRequest
 from tdaclient.schema.get_quote_response import GetQuoteResponse
 from tdaclient.schema.market_hours_response import MarketHoursResponse
+from tdaclient.schema.market_hours_request import MarketHoursRequest
 from tdaclient.schema.option_chain_request import OptionChainRequest
 from tdaclient.schema.option_chain_response import OptionChainResponse
 from tdaclient.schema.post_access_token_request import PostAccessTokenRequest

@@ -17,6 +17,8 @@ from tdaclient.schema import (
     OptionChainResponse,
     GetQuotesRequest,
     GetQuotesResponse,
+    MarketHoursResponse,
+    MarketHoursRequest,
 )
 from tdaclient.schema.get_account_request import GetAccountRequest
 from tdaclient.schema.user_principal_request import UserPrincipalRequest
@@ -141,3 +143,13 @@ class TDAClient:
             ),
         )
         return OptionChainResponse(output=response)
+
+    def market_hours(
+        self, market_hours_request: MarketHoursRequest
+    ) -> MarketHoursResponse:
+        response = self.__get(
+            "marketdata/hours",
+            headers=self.__auth_header(market_hours_request.authorization.access_token),
+            query_params=market_hours_request.input.dict(),
+        )
+        return MarketHoursResponse(output=response)

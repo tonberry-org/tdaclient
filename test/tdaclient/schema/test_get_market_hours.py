@@ -3,9 +3,40 @@ import json
 
 RESPONSE = """
 {
+    "equity": {
+        "EQ": {
+            "date": "2023-01-04",
+            "marketType": "EQUITY",
+            "exchange": "NULL",
+            "category": "NULL",
+            "product": "EQ",
+            "productName": "equity",
+            "isOpen": true,
+            "sessionHours": {
+                "preMarket": [
+                    {
+                        "start": "2023-01-04T07:00:00-05:00",
+                        "end": "2023-01-04T09:30:00-05:00"
+                    }
+                ],
+                "regularMarket": [
+                    {
+                        "start": "2023-01-04T09:30:00-05:00",
+                        "end": "2023-01-04T16:00:00-05:00"
+                    }
+                ],
+                "postMarket": [
+                    {
+                        "start": "2023-01-04T16:00:00-05:00",
+                        "end": "2023-01-04T20:00:00-05:00"
+                    }
+                ]
+            }
+        }
+    },
     "option": {
         "EQO": {
-            "date": "2022-12-29",
+            "date": "2023-01-04",
             "marketType": "OPTION",
             "exchange": "NULL",
             "category": "NULL",
@@ -15,14 +46,14 @@ RESPONSE = """
             "sessionHours": {
                 "regularMarket": [
                     {
-                        "start": "2022-12-29T09:30:00-05:00",
-                        "end": "2022-12-29T16:00:00-05:00"
+                        "start": "2023-01-04T09:30:00-05:00",
+                        "end": "2023-01-04T16:00:00-05:00"
                     }
                 ]
             }
         },
         "IND": {
-            "date": "2022-12-29",
+            "date": "2023-01-04",
             "marketType": "OPTION",
             "exchange": "NULL",
             "category": "NULL",
@@ -32,8 +63,8 @@ RESPONSE = """
             "sessionHours": {
                 "regularMarket": [
                     {
-                        "start": "2022-12-29T09:30:00-05:00",
-                        "end": "2022-12-29T16:15:00-05:00"
+                        "start": "2023-01-04T09:30:00-05:00",
+                        "end": "2023-01-04T16:15:00-05:00"
                     }
                 ]
             }
@@ -43,6 +74,6 @@ RESPONSE = """
 """
 
 
-def test_get_market_hours() -> None:
+def test_market_hours_response() -> None:
     response = MarketHoursResponse(output=json.loads(RESPONSE))
     print(response)
