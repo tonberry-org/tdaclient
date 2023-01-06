@@ -132,6 +132,19 @@ class TDAClient:
         )
         return GetQuotesResponse(output=response)
 
+    def __drop_nan(
+        self, get_option_chain_response: dict[str, dict[str, dict[str, Any]]]
+    ) -> Any:
+        for exp in get_option_chain_response["callExpDateMap"]:
+            for strike in get_option_chain_response["callExpDateMap"][exp]:
+                get_option_chain_response["callExpDateMap"][exp] = {
+                    key: None if value == "NaN" else value
+                    for (key, value) in get_option_chain_response["callExpDateMap"][
+                        exp
+                    ].items()
+                }
+        return get_option_chain_response
+
     def get_option_chain(
         self, get_option_chain_request: OptionChainRequest
     ) -> OptionChainResponse:
@@ -142,6 +155,7 @@ class TDAClient:
                 get_option_chain_request.authorization.access_token
             ),
         )
+        response = self.__drop_nan(response)
         return OptionChainResponse(output=response)
 
     def market_hours(
