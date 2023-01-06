@@ -135,14 +135,13 @@ class TDAClient:
     def __drop_nan(
         self, get_option_chain_response: dict[str, dict[str, dict[str, Any]]]
     ) -> Any:
-        for exp in get_option_chain_response["callExpDateMap"]:
-            for strike in get_option_chain_response["callExpDateMap"][exp]:
-                get_option_chain_response["callExpDateMap"][exp] = {
-                    key: None if value == "NaN" else value
-                    for (key, value) in get_option_chain_response["callExpDateMap"][
-                        exp
-                    ].items()
-                }
+        for putcall in ["putExpDateMap", "callExpDateMap"]:
+            for exp in get_option_chain_response[putcall]:
+                for strike in get_option_chain_response[putcall][exp]:
+                    for option in get_option_chain_response[putcall][exp][strike]:
+                        for key in option:
+                            if option[key] == "NaN":
+                                option[key] = None
         return get_option_chain_response
 
     def get_option_chain(
