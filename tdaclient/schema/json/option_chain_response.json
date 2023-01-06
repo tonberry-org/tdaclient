@@ -113,11 +113,11 @@
         "exchangeName": {
           "type": "string"
         },
-        "bidPrice": {
+        "bid": {
           "type": "string",
           "format": "decimal"
         },
-        "askPrice": {
+        "ask": {
           "type": "string",
           "format": "decimal"
         },
