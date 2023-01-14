@@ -18,7 +18,6 @@
   "definitions": {
     "MarketHoursOutput": {
       "type": "object",
-      "required": ["sessionHours"],
       "properties": {
         "category": {
           "type": "string"
