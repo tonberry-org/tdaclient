@@ -95,9 +95,11 @@ class TDAClient:
         return result
 
     def userprincipals(self, request: UserPrincipalRequest) -> UserPrincipalResponse:
+        query_params = request.input.dict() if request.input is not None else None
         return UserPrincipalResponse(
             output=self.__get(
                 "userprincipals",
+                query_params=query_params,
                 headers=self.__auth_header(request.authorization.access_token),
             )
         )
